@@ -73,7 +73,7 @@ for i in range(number_of_players):
     display.scroll(sum(list_of_player_results))
     sleep(1)
     list_of_all_results.append(list_of_player_results)
-    list_of_player_results = []
+    list_of_player_results.clear()
     
 dice_result = 0
 
