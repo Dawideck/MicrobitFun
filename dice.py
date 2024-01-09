@@ -1,5 +1,6 @@
 from microbit import *
 import random
+from time import *
 
 dice1 = Image('00000:' 
               '03530:' 
@@ -37,6 +38,7 @@ dice6 = Image('59595:'
               '35353:' 
               '59595:')
 
+
 list_of_all_results = []
 list_of_player_results = []
 number_of_players = int(input("Podaj ilosc graczy:" ))
@@ -64,9 +66,12 @@ for i in range(number_of_players):
             display.show(dice6)
             
         print(dice_result)
-            
+        
         list_of_player_results.append(dice_result)
-    
+        
+    sleep(2)
+    display.scroll(sum(list_of_player_results))
+    sleep(1)
     list_of_all_results.append(list_of_player_results)
     list_of_player_results = []
     
